@@ -1,10 +1,10 @@
 provider aws {
-    region = var.region
+    region = "us-east-1"
 }
 
 resource "aws_instance" "web" {
-  ami           = var.ami
-  instance_type = var.instance_type
+  ami           = "ami-09e6f87a47903347c"
+  instance_type = "t2.micro"
 }
 
 terraform {
@@ -14,16 +14,4 @@ terraform {
     region = "us-east-1"
     use_lockfile = true
   }
-}
-
-variable region {
-    
-}
-
-variable ami {
-
-}
-
-variable instance_type {
-
 }
